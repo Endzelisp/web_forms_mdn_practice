@@ -10,6 +10,25 @@
     <title>MDN Web form practice</title>
 </head>
 <body>
-    
+	<main>
+		<form action="http://httpbin.org/post" method="post">
+			<fieldset>
+				<legend>Contact form</legend>
+				<div>
+					<label for="user-name">Name</label>
+					<input type="text" name="user-name" id="user-name" placeholder="Your Name">
+				</div>
+				<div>
+					<label for="user-email">Email</label>
+					<input type="email" name="user-email" id="user-email" placeholder="Your Email" autocomplete="email">
+				</div>
+				<textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+				<button type="submit">Submit</button>
+			</fieldset>
+		</form>
+	</main>
+	<footer>
+		<a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form" target="_blank" rel="noopener noreferrer" title="Your first form">MDN Web form tutorial</a>
+	</footer>
 </body>
 </html>
