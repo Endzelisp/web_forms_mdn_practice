@@ -8,40 +8,77 @@
 
 :root {
   --main-height: 90vh;
-  --main-bg: rgb(255, 247, 223);
+  --main-bg: rgb(255, 255, 255);
+  --main-font-clr: #f1faee; 
+  --form-bg: #457b9d;
+  --form-bg-btn: #1d3557;
   --footer-height: 10vh;
   --footer-bg: rgb(39, 39, 39);
   --footer-font-clr: rgb(223, 223, 223);
 }
 
 main {
-
   min-height: var(--main-height);
-  background-color: var(--main-bg, rgb(255, 241, 196));
+  background-color: var(--main-bg, rgb(77, 139, 209));
 }
 
 main form {
   margin: auto;
-  width: clamp(300px, 60vw, 1200px);
+  color: var(--main-font-clr);
 }
 
-main form fieldset {
-  width: 90%;
+form fieldset {
+  width: clamp(calc(300px + 8ch), 50vw, 75ch);
   margin: auto;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  border-top: none;
   border-radius: 12px;
+  background:var(--form-bg);
 }
 
-form fieldset > div {
+form > fieldset > legend {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: var(--main-font-clr);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+fieldset > div {
   display: flex;
+  width: 100%;
   gap: 1ch;
 }
 
+fieldset label {
+  width: 8ch;
+}
 
+fieldset input {
+  width: clamp(calc(300px - 8ch), 50vw, 72ch);
+  padding: 0.3rem;
+}
+
+fieldset textarea {
+  resize: none;
+  width: clamp(calc(300px - 8ch), 50vw, 75ch);
+}
+
+fieldset button {
+  padding: 1rem 3rem;
+  align-self: center;
+  font-size: 1.25rem;
+  background-color: var(--form-bg-btn);
+  color: var(--main-font-clr);
+  border-radius: 0.5rem;
+}
 
 footer {
   display: flex;
